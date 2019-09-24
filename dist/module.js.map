@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/module.js"],"names":["Controller"],"mappings":";;;;;;;;AACSA,gB,eAAAA,U;;;2BAEPA,U","file":"module.js","sourcesContent":["/* jshint esversion: 6 */\r\nimport { Controller} from \"./controller\";\r\nexport {\r\n  Controller as PanelCtrl\r\n};\r\n"]}

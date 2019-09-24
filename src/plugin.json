@@ -1,0 +1,22 @@
+{
+  "id": "echarts-grafana",
+  "type": "panel",
+  "name": "Echarts Grafana",
+  "info": {
+    "description": "Echarts Grafana",
+    "author": {
+      "name": "ZJL",
+      "url": ""
+    },
+    "keywords": ["Echarts","Grafana"],
+    "logos": {
+      "small": "",
+      "large": ""
+    },
+    "version": "1.0.0"
+  },
+  "dependencies": {
+    "grafanaVersion": "4.x.x",
+    "plugins": [ ]
+  }
+}
