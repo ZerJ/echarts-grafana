@@ -9,6 +9,7 @@ System.register(["./controller"], function (_export, _context) {
       Controller = _controller.Controller;
     }],
     execute: function () {
+      /* jshint esversion: 6 */
       _export("PanelCtrl", Controller);
     }
   };

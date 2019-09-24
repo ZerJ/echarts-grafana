@@ -1,39 +1,35 @@
-'use strict';
+"use strict";
 
-System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './rendering'], function (_export, _context) {
+System.register(["app/plugins/sdk", "lodash", "app/core/utils/kbn", "./rendering"], function (_export, _context) {
   "use strict";
 
-  var MetricsPanelCtrl, _, kbn, rendering, _slicedToArray, _createClass, Controller;
+  var MetricsPanelCtrl, _, kbn, rendering, Controller;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
+  function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-  function _possibleConstructorReturn(self, call) {
-    if (!self) {
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
+  function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-  }
+  function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
+  function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-      constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
+  function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
   return {
     setters: [function (_appPluginsSdk) {
@@ -46,72 +42,18 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './rendering
       rendering = _rendering.default;
     }],
     execute: function () {
-      _slicedToArray = function () {
-        function sliceIterator(arr, i) {
-          var _arr = [];
-          var _n = true;
-          var _d = false;
-          var _e = undefined;
-
-          try {
-            for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-              _arr.push(_s.value);
-
-              if (i && _arr.length === i) break;
-            }
-          } catch (err) {
-            _d = true;
-            _e = err;
-          } finally {
-            try {
-              if (!_n && _i["return"]) _i["return"]();
-            } finally {
-              if (_d) throw _e;
-            }
-          }
-
-          return _arr;
-        }
-
-        return function (arr, i) {
-          if (Array.isArray(arr)) {
-            return arr;
-          } else if (Symbol.iterator in Object(arr)) {
-            return sliceIterator(arr, i);
-          } else {
-            throw new TypeError("Invalid attempt to destructure non-iterable instance");
-          }
-        };
-      }();
-
-      _createClass = function () {
-        function defineProperties(target, props) {
-          for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-          }
-        }
-
-        return function (Constructor, protoProps, staticProps) {
-          if (protoProps) defineProperties(Constructor.prototype, protoProps);
-          if (staticProps) defineProperties(Constructor, staticProps);
-          return Constructor;
-        };
-      }();
-
-      _export('Controller', Controller = function (_MetricsPanelCtrl) {
+      _export("Controller", Controller =
+      /*#__PURE__*/
+      function (_MetricsPanelCtrl) {
         _inherits(Controller, _MetricsPanelCtrl);
 
         function Controller($scope, $injector, $rootScope) {
+          var _this;
+
           _classCallCheck(this, Controller);
 
-          var _this = _possibleConstructorReturn(this, (Controller.__proto__ || Object.getPrototypeOf(Controller)).call(this, $scope, $injector));
-
+          _this = _possibleConstructorReturn(this, _getPrototypeOf(Controller).call(this, $scope, $injector));
           _this.$rootScope = $rootScope;
-
           var optionDefaults = {
             type: 'map',
             legend: {
@@ -138,21 +80,27 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './rendering
           };
 
           _.defaults(_this.panel, optionDefaults);
+
           _.defaults(_this.panel.legend, optionDefaults.legend);
 
-          _this.events.on('render', _this.onRender.bind(_this));
-          _this.events.on('data-received', _this.onDataReceived.bind(_this));
-          _this.events.on('data-error', _this.onDataError.bind(_this));
-          _this.events.on('data-snapshot-load', _this.onDataReceived.bind(_this));
-          _this.events.on('init-edit-mode', _this.onInitEditMode.bind(_this));
+          _this.events.on('render', _this.onRender.bind(_assertThisInitialized(_this)));
+
+          _this.events.on('data-received', _this.onDataReceived.bind(_assertThisInitialized(_this)));
+
+          _this.events.on('data-error', _this.onDataError.bind(_assertThisInitialized(_this)));
+
+          _this.events.on('data-snapshot-load', _this.onDataReceived.bind(_assertThisInitialized(_this)));
+
+          _this.events.on('init-edit-mode', _this.onInitEditMode.bind(_assertThisInitialized(_this)));
+
           return _this;
         }
 
         _createClass(Controller, [{
-          key: 'onRender',
+          key: "onRender",
           value: function onRender() {}
         }, {
-          key: 'onDataReceived',
+          key: "onDataReceived",
           value: function onDataReceived(dataList) {
             var _this2 = this;
 
@@ -162,33 +110,41 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './rendering
             this.name = [];
             this.value = [];
             this.dname = [];
+            this.nation = [];
+
             if (data) {
               data.rows.forEach(function (_ref) {
-                var _ref2 = _slicedToArray(_ref, 3),
+                var _ref2 = _slicedToArray(_ref, 4),
                     name = _ref2[0],
                     value = _ref2[1],
-                    dname = _ref2[2];
+                    dname = _ref2[2],
+                    nation = _ref2[3];
 
                 _this2.name.push(name);
+
                 _this2.value.push(value);
+
                 _this2.dname.push(dname);
+
+                _this2.nation.push(nation);
               });
             }
+
             this.render();
           }
         }, {
-          key: 'onDataError',
+          key: "onDataError",
           value: function onDataError() {
             this.render();
           }
         }, {
-          key: 'onInitEditMode',
+          key: "onInitEditMode",
           value: function onInitEditMode() {
             this.addEditorTab('图表选项', 'public/plugins/echarts-grafana/partials/module.editor.html', 2);
             this.unitFormats = kbn.getUnitFormats();
           }
         }, {
-          key: 'link',
+          key: "link",
           value: function link(scope, elem, attrs, ctrl) {
             rendering(scope, elem, attrs, ctrl);
           }
@@ -196,8 +152,6 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './rendering
 
         return Controller;
       }(MetricsPanelCtrl));
-
-      _export('Controller', Controller);
 
       Controller.templateUrl = './partials/module.html';
     }

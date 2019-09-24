@@ -2,14 +2,12 @@
 import {MetricsPanelCtrl} from 'app/plugins/sdk';
 import _ from 'lodash';
 import kbn from 'app/core/utils/kbn';
-import rendering from './rendering'
-
+import rendering from './rendering';
 
 export class Controller extends MetricsPanelCtrl {
   constructor($scope, $injector, $rootScope) {
     super($scope, $injector);
     this.$rootScope = $rootScope;
-
     const optionDefaults = {
       type: 'map',
       legend: {
@@ -53,11 +51,13 @@ export class Controller extends MetricsPanelCtrl {
     this.name = [];
     this.value = [];
     this.dname = [];
+    this.nation = [];
     if (data) {
-      data.rows.forEach(([name, value,dname]) => {
+      data.rows.forEach(([name, value,dname,nation]) => {
         this.name.push(name);
         this.value.push(value);
         this.dname.push(dname);
+        this.nation.push(nation)
       });
     }
     this.render();
